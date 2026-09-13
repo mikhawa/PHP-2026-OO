@@ -40,15 +40,3 @@ class Tamagotchi
         return '🐣 ' . $this->nom . ' a une faim de ' . $this->faim . '/100';
     }
 }
-
-$pixel = new Tamagotchi('Pixel');
-echo $pixel . PHP_EOL;   // pas de ->etat() : __toString() fait le travail
-
-echo PHP_EOL . '10 parties de suite :' . PHP_EOL;
-
-for ($i = 1; $i <= 10; $i++) {
-    $pixel->jouer();
-    echo '  après ' . $i . ' partie(s) : ' . $pixel . PHP_EOL;
-}
-
-echo PHP_EOL . '✅ La faim s\'arrête à 100 : borner() a fait son travail.' . PHP_EOL;
